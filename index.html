@@ -1,9 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Parcial Surge</title>
+    <meta charset="UTF-8">
+    <title>Parcial Integración Continua - Surge.sh</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-weight: normal;
+            color: #cbd5e1;
+        }
+
+        .container {
+            background: white;
+            color: #0f172a;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-top: 30px;
+        }
+
+        .info {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+            transform: scale(1.05);
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hola mundo desde Surge y GitHub Actions</h1>
+
+<header>
+    <h1>Integración Continua con GitHub Actions y Surge.sh</h1>
+    <h2>Despliegue automático de página web</h2>
+</header>
+
+<div class="container">
+
+    <p class="info"><strong>Estudiante:</strong> Brian Santiago Martinez</p>
+
+    <p class="info"><strong>Asignatura:</strong> Electiva 2</p>
+
+    <p class="info"><strong>Profesor:</strong> ITLA</p>
+
+    <p class="info"><strong>Tecnologías utilizadas:</strong></p>
+
+    <p class="info">Git</p>
+    <p class="info">GitHub</p>
+    <p class="info">GitHub Actions</p>
+    <p class="info">Surge.sh</p>
+    <p class="info">HTML + CSS</p>
+
+    <button class="btn" onclick="mostrarMensaje()">
+        Verificar funcionamiento
+    </button>
+
+</div>
+
+<footer>
+    Proyecto de Integración Continua © 2026
+</footer>
+
+<script>
+
+function mostrarMensaje() {
+    alert("La integración continua funciona correctamente 🚀");
+}
+
+</script>
+
 </body>
 </html>
