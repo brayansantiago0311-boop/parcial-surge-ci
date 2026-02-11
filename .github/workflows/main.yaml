@@ -2,26 +2,28 @@ name: Deploy to Surge
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      # Paso 1: Descargar el código del repositorio
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      # Paso 2: Instalar Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
+      # Paso 3: Instalar Surge.sh
       - name: Install Surge
         run: npm install -g surge
 
+      # Paso 4: Desplegar a Surge.sh usando el token
       - name: Deploy to Surge
-        env:
-          SURGE_LOGIN: ${{ secrets.SURGE_LOGIN }}
-          SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
-        run: surge ./ parcial-surge-ci-braya.surge.sh
+        run: surge ./ parcial-surge-ci-braya.surge.sh --token ${{ secrets.SURGE_TOKEN }}
